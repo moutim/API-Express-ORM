@@ -15,7 +15,7 @@ module.exports = {
       },
       quantidade: {
         allowNull: false,
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER
       }
     },
     { timestamps: false }
