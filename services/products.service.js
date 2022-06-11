@@ -32,11 +32,20 @@ const changeProduct = async ({ nome, quantidade, id }) => {
   const product = Produtos.update({ nome, quantidade}, { where: { id: id }});
 
   return product;
+};
+
+const deleteProduct = async (id) => {
+  await getProductsById(id);
+
+  const product = Produtos.destroy({ where: { id: id }});
+
+  return product;
 }
 
 module.exports = {
   getAllProducts,
   getProductsById,
   createProduct,
-  changeProduct
+  changeProduct,
+  deleteProduct
 }

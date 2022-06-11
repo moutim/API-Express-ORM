@@ -11,4 +11,6 @@ routes.post('/', middlewares.verifyBodyProducts, controller.createProduct);
 
 routes.put('/', middlewares.verifyBodyProducts, controller.changeProduct);
 
+routes.delete('/:id', controller.deleteProduct);
+
 module.exports = routes;
