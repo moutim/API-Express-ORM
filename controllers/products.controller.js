@@ -21,7 +21,7 @@ const createProduct = async (req, res) => {
 const changeProduct = async (req, res) => {
   await service.changeProduct({ ...req.body });
 
-  res.status(203).json(req.body);
+  res.status(200).json(req.body);
 };
 
 const deleteProduct = async (req, res) => {
@@ -29,7 +29,7 @@ const deleteProduct = async (req, res) => {
 
   await service.deleteProduct(id);
 
-  res.status(204).end();
+  res.status(200).json({ message: 'Produto deletado com sucesso!'});
 };
 
 
