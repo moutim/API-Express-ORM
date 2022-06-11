@@ -7,7 +7,7 @@ module.exports = {
         allowNull: false,
         type:Sequelize.INTEGER,
         references: {
-          model: 'produtos',
+          model: 'Produtos',
           id: 'id'
         },
         onDelete: 'CASCADE',
@@ -17,7 +17,7 @@ module.exports = {
         allowNull: false,
         type:Sequelize.INTEGER,
         references: {
-          model: 'vendas',
+          model: 'Vendas',
           id: 'id'
         },
         onDelete: 'CASCADE',
@@ -27,7 +27,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       }
-    }, { timestamps: false });
+    });
   },
 
   async down (queryInterface, Sequelize) {
