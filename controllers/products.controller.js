@@ -6,6 +6,13 @@ const getAllProducts = async (req, res) => {
   res.status(200).json(products);
 };
 
+const getProductsById = async (req, res) => {
+  const product = await service.getProductsById(req.params.id);
+
+  res.status(200).json(product)
+}
+
 module.exports = {
-  getAllProducts
+  getAllProducts,
+  getProductsById
 };
