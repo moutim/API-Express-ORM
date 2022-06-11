@@ -1,6 +1,6 @@
 const vendas = (sequelize, DataTypes) => {
   const tabelaVendas = sequelize.define("Vendas", {
-    date: DataTypes.DATE,
+    data: DataTypes.DATE,
   }, { timestamps: false });
 
   return tabelaVendas;
