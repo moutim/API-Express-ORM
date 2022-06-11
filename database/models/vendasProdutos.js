@@ -4,14 +4,14 @@ const vendasProdutos = (sequelize, DataTypes) => {
   );
 
   tabelaVendasProdutos.associate = (models) => {
-    models.produtos.belongsToMany(models.vendas, {
+    models.Produtos.belongsToMany(models.Vendas, {
       through: tabelaVendasProdutos,
       foreignKey: 'produtoId',
       otherKey: 'vendaId',
       as: 'produto'
     });
 
-    models.vendas.belongsToMany(models.produtos, {
+    models.Vendas.belongsToMany(models.Produtos, {
       through: tabelaVendasProdutos,
       foreignKey: "vendaId",
       otherKey: "produtoId",
