@@ -24,10 +24,19 @@ const createProduct =  ({ nome, quantidade }) => {
   const product = Produtos.create({ nome, quantidade });
 
   return product;
+};
+
+const changeProduct = async ({ nome, quantidade, id }) => {
+  await getProductsById(id);
+
+  const product = Produtos.update({ nome, quantidade}, { where: { id: id }});
+
+  return product;
 }
 
 module.exports = {
   getAllProducts,
   getProductsById,
   createProduct,
+  changeProduct
 }

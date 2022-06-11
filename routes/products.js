@@ -9,4 +9,6 @@ routes.get('/:id', controller.getProductsById);
 
 routes.post('/', middlewares.verifyBodyProducts, controller.createProduct);
 
+routes.put('/', middlewares.verifyBodyProducts, controller.changeProduct);
+
 module.exports = routes;
