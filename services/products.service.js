@@ -18,9 +18,16 @@ const getProductsById = async (id) => {
   }
 
   return product;
+};
+
+const createProduct =  ({ nome, quantidade }) => {
+  const product = Produtos.create({ nome, quantidade });
+
+  return product;
 }
 
 module.exports = {
   getAllProducts,
-  getProductsById
+  getProductsById,
+  createProduct,
 }
