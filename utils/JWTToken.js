@@ -5,12 +5,16 @@ const SECRET = process.env.SECRET || "token";
 const jwtConfig = {
   expiresIn: '15m',
   algorithm: 'HS256',
-}
+};
+
+const decodeToken = (token) => {
+  return jwt.decode(token);
+};
 
 const generateToken = (payload) => {
   const obj = JSON.parse(payload);
   return jwt.sign(obj, SECRET, jwtConfig);
-} 
+};
 
 const authenticateToken = (token) => {
   if (!token) {
@@ -27,5 +31,6 @@ const authenticateToken = (token) => {
 
 module.exports = {
   generateToken,
-  authenticateToken
+  authenticateToken,
+  decodeToken
 };
