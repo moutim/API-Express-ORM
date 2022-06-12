@@ -7,4 +7,10 @@ routes.get('/', controller.getAllSales);
 
 routes.get('/:id', controller.getSalesById);
 
+routes.post('/', 
+  middlewares.authenticatePermission,
+  middlewares.verifyBodySales,
+  controller.createSale
+);
+
 module.exports = routes;
