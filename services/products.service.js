@@ -14,7 +14,7 @@ const getProductsById = async (id) => {
   const product = await Produtos.findByPk(id);
 
   if (!product || product.length === 0) {
-    throw new Error(JSON.stringify({ status: 404, message: 'Produto nao encontrado.' }));
+    throw new Error(JSON.stringify({ status: 404, message: `Produto com id "${id}" nao encontrado.` }));
   }
 
   return product;
