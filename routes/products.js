@@ -7,10 +7,21 @@ routes.get('/', controller.getAllProducts);
 
 routes.get('/:id', controller.getProductsById);
 
-routes.post('/', middlewares.verifyBodyProducts, controller.createProduct);
+routes.post('/',
+  middlewares.authenticatePermission, 
+  middlewares.verifyBodyProducts, 
+  controller.createProduct
+);
 
-routes.put('/', middlewares.verifyBodyProducts, controller.changeProduct);
+routes.put('/',
+  middlewares.authenticatePermission, 
+  middlewares.verifyBodyProducts,
+  controller.changeProduct
+);
 
-routes.delete('/:id', controller.deleteProduct);
+routes.delete('/:id',
+  middlewares.authenticatePermission,
+  controller.deleteProduct
+);
 
 module.exports = routes;
