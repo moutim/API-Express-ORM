@@ -1,5 +1,7 @@
 const vendasProdutos = (sequelize, DataTypes) => {
-  const tabelaVendasProdutos = sequelize.define("vendasProdutos", {},
+  const tabelaVendasProdutos = sequelize.define("vendasProdutos", {
+    quantidade: DataTypes.INTEGER
+  },
     { timestamps: false }
   );
 
