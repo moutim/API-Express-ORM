@@ -4,8 +4,8 @@ const permissoes = (sequelize, DataTypes) => {
   }, { timestamps: false });
 
   tabelaPermissoes.associate = (models) => {
-    tabelaPermissoes.hasOne('Usuarios', {
-      foreignKey: 'permissao', as: 'permissao'
+    tabelaPermissoes.hasOne(models.Usuarios, {
+      foreignKey: 'permissaoId', as: 'usuario'
     });
   };
 

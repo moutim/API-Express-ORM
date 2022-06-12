@@ -5,8 +5,8 @@ const usuarios = (sequelize, DataTypes) => {
   }, { timestamps: false });
 
   tabelaUsuarios.associate = (models) => {
-    tabelaUsuarios.belongsTo('Permissoes', {
-      foreignKey: 'permissao', as: 'permissao'
+    tabelaUsuarios.belongsTo(models.Permissoes, {
+      foreignKey: 'permissaoId', as: 'permissao'
     });
   };
 

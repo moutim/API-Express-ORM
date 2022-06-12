@@ -6,12 +6,12 @@ module.exports = {
       {
         usuario: 'vitormoutim',
         senha: '123',
-        permissao: 1
+        permissaoId: 1
       },
       {
         usuario: 'trybe',
         senha: 'trybe',
-        permissao: 2
+        permissaoId: 2
       }
     ], {});
   },

@@ -18,7 +18,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      permissao: {
+      permissaoId: {
         allowNull: false,
         type:Sequelize.INTEGER,
         references: {
