@@ -1,5 +1,5 @@
 const errorHandler = (error, req, res, next) => {
-  let erro = { status: 500, message: 'Erro interno.'};
+  let erro = { status: 500, message: error.message };
 
   try {
     erro = JSON.parse(error.message);
