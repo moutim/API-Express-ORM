@@ -1,7 +1,7 @@
 # API RESTful Blog
 
 ## Documentação:
-[Link]([https://moutim-stats-spotify.herokuapp.com/](https://documenter.getpostman.com/view/19292971/UzBtnin7))
+[Deploy no Heroku](https://documenter.getpostman.com/view/19292971/UzBtnin7)
 ![image-20220219224639838](preview.png)
 
 ## Resumo do projeto
